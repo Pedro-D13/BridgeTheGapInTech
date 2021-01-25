@@ -1,1 +1,30 @@
-<p>team works!</p>
+
+<h2 class="team-title"> The Team </h2>
+
+<section class="card-list">
+  <ng-container *ngFor="let each of data">
+    <article class="card">
+      <header class="card-header">
+        <h2>{{each.name}}</h2>
+        <p> {{each.info}}</p>
+      </header>
+      <div class="card-dev">
+        <a class="dev-avatar" href="#">
+          <img [src]="each.img" alt="">
+        </a>
+        <svg class="half-circle" viewBox="0 0 106 57">
+          <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+        </svg>
+      </div>
+      <div class="dev-role">
+        <div class="dev-handle"> @faketwitter</div>
+        fullstack developer
+      </div>
+      <div class="tags">
+        <a href="#">html</a>
+        <a href="#">css</a>
+        <a href="#">web design</a>
+      </div>
+    </article>
+  </ng-container>
+</section>
