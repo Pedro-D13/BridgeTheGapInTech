@@ -1,5 +1,5 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-team',
@@ -8,9 +8,23 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class TeamComponent implements OnInit {
   relPath = "assets/team_image/"
-  constructor(private resource: DomSanitizer) {
+  constructor(private bpo:BreakpointObserver) {
+    bpo.observe([
+      Breakpoints.HandsetPortrait,
+      Breakpoints.Small
+    ]).subscribe(results => {
+      if (results.matches){
+        this.activateHandsetLayout()
+      }
+    })
+  }
+
+
+  activateHandsetLayout(){
 
   }
+
+
 
   ngOnInit(): void {
   }

@@ -142,3 +142,31 @@
     background-clip: text;
     border-color: white;
 }
+
+
+@media only screen and (max-width:600px){
+  .card-list{
+    display: flex;
+    flex-direction:column;
+    margin: 0.5 1rem;
+  }
+
+  .card{
+    box-shadow: 0 1rem 5rem #000;
+  }
+  .card.card:not(:first-child){
+    margin-left: 0px;
+  }
+
+  .card:hover{
+    transform: translateY(-40px);
+  }
+  .card:hover~.card{
+  transform: translateX(0px);
+}
+
+
+
+
+
+}
