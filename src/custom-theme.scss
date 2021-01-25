@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$BTGIT-Angular-primary: mat-palette($mat-grey, 900);
+$BTGIT-Angular-accent: mat-palette($mat-brown,A100);
+// $BTGIT-Angular-warn: mat-palette($mat-red);
+// $BTGIT-Angular-foreground:mat-palette();
+// $BTGIT-Angular-background:mat-palette();
+
+
+$custom-theme: mat-dark-theme($BTGIT-Angular-primary,$BTGIT-Angular-accent);
+
+@include angular-material-theme($custom-theme);
