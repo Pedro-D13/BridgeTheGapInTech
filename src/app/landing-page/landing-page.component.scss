@@ -1,0 +1,52 @@
+:host{
+  width: 100vw;
+  background-color: black;
+}
+
+.landing-page-section-1{
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://images.squarespace-cdn.com/content/5f5b473b9d3e7c2d1524f0bc/1599835849082-49MZWJG3A9VHOYEVF641/WritingWhite.png?format=1000w&content-type=image%2Fpng');
+
+}
+
+.typewriter-container {
+  display: grid;
+  place-items: center;
+  margin-top: 1rem;
+}
+
+.typewriter h1 {
+  max-width: 100%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 2.5s steps(35, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+.landing-page-section-2 {
+  text-align:  center;
+  padding: 10vw;
+  font-size: medium;
+  line-height: 3rem;
+}
+

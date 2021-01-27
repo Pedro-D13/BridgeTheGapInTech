@@ -1,0 +1,81 @@
+
+.mat-toolbar{
+  background-color: black;
+}
+
+.sidenav-container {
+  height: 100%;
+  background-color: black;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.top-row{
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  // grid-template-columns: 1fr 1fr;
+  place-items: center;
+  justify-content: left;
+  // max-height: fit-content;
+
+}
+
+
+.logo_img {
+  width: 10vw;
+  margin: 2rem auto;
+  height: fit-content;
+  min-width: 200px;
+}
+
+
+.row-of-links{
+  display: flex;
+  justify-content: flex-end;
+  font-size: medium;
+  width: 100%;
+  margin: 1rem 2rem;
+
+    *{
+      padding: 6px 0;
+      margin: 0 1rem;
+    }
+}
+
+
+.menu-links{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+}
+
+
+.menu-links:hover{
+  animation-name: underline;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  animation-duration: .5s;
+  // animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  overflow: hidden;
+  stroke-linecap: square;
+}
+
+
+@keyframes underline {
+  from { border-bottom: 4px solid white;  }
+  to { border-bottom: 4px solid #f1593c; }
+}

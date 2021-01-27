@@ -1,0 +1,37 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false"
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item > Home </a>
+      <a mat-list-item > Join us </a>
+      <a mat-list-item > The Team </a>
+      <a mat-list-item > About Us </a>
+      <a mat-list-item > Code of Conduct </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <mat-toolbar>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <ng-container *ngIf="!(isHandset$ | async)">
+          <div class="row-of-links">
+            <a mat-flat-button href="#" class="menu-links"> Home </a>
+            <a mat-flat-button href="#" class="menu-links"> Join us </a>
+            <a mat-flat-button href="#" class="menu-links"> The Team </a>
+            <a mat-flat-button href="#" class="menu-links"> About Us </a>
+            <a mat-flat-button href="#" class="menu-links"> Code of Conduct </a>
+          </div>
+        </ng-container>
+      </mat-toolbar>
+      <mat-toolbar>
+        <div class="top-row">
+          <img class="logo_img" [src]="relPath+'/logo.png'" alt="">
+        </div>
+      </mat-toolbar>
+    <app-landing-page></app-landing-page>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
