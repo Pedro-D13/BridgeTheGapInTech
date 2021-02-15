@@ -1,0 +1,70 @@
+<h1 class="title">
+  Learn the Fundamentals of Web Developement
+</h1>
+<mat-accordion *ngIf="!isOnSmallScreen; else stackedView" multi>
+  <mat-expansion-panel class="dropdown-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="panel-title">
+        <img class="tech-logo" [src]="relPath + 'html.png'" alt="">
+        <img class="tech-logo" [src]="relPath + 'css.png'" alt="">
+        <div>
+          Html & CSS
+        </div>
+      </mat-panel-title>
+      <mat-panel-description>
+        The basic building blocks of web development.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>
+      This is a 2 week introduction into the fundamentals of web development, before we can run we must walk. and before
+      we can build out the next facebook we need to developer a understanding of web technology fundamentals!!</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="dropdown-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="panel-title">
+        <img class="tech-logo" [src]="relPath + 'javascript.png'">
+        <img class="tech-logo" [src]="relPath + 'typescript.png'">
+        JavaScript & TypeScript
+      </mat-panel-title>
+      <mat-panel-description>
+        The programming language of the Web
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nemo ipsa cumque officiis architecto voluptatibus,
+      vero provident sit rem totam.</p>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="dropdown-container">
+    <mat-expansion-panel-header>
+      <mat-panel-title class="panel-title">
+        <img class="tech-logo" [src]="relPath + 'react.svg'" alt="">
+        <img class="tech-logo" [src]="relPath + 'node.svg'" alt="">
+        Node Js & React
+      </mat-panel-title>
+      <mat-panel-description>
+        harnessing the power Frameworks
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>
+      This is a 2 week introduction into the fundamentals of web development, before we can run we must walk. and before
+      we can build out the next facebook we need to developer a understanding of web technology fundamentals!!</p>
+  </mat-expansion-panel>
+</mat-accordion>
+<ng-template #stackedView>
+    <div class="icon-row" matTooltip="Understand basic building blocks of web development.">
+      <img class="tech-logo" [src]="relPath + 'html.png'" alt="">
+      <img class="tech-logo" [src]="relPath + 'css.png'" alt="">
+    </div>
+  <mat-divider></mat-divider>
+    <div class="icon-row" matTooltip="Learn the programming language of the Web and the frontier">
+      <img class="tech-logo" [src]="relPath + 'javascript.png'">
+      <img class="tech-logo" [src]="relPath + 'typescript.png'">
+    </div>
+  <mat-divider></mat-divider>
+    <div class="icon-row" matTooltip="Harnessing the power Frameworks">
+      <img class="tech-logo" [src]="relPath + 'react.svg'" alt="">
+      <img class="tech-logo" [src]="relPath + 'node.svg'" alt="">
+    </div>
+</ng-template>
+
+

@@ -4,12 +4,15 @@
 }
 
 .landing-page-section-1{
-    height: 95vh;
-    background-position: center;
+  overflow: hidden;
+    background-attachment: local;
+    height: 50%;
+    min-height: 80vh;
+    min-width: 80vw;
+    background-position:center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-image: url('https://images.squarespace-cdn.com/content/5f5b473b9d3e7c2d1524f0bc/1599835849082-49MZWJG3A9VHOYEVF641/WritingWhite.png?format=1000w&content-type=image%2Fpng');
-
 }
 
 .typewriter-container {
@@ -50,3 +53,23 @@
   line-height: 3rem;
 }
 
+.title{
+  font-weight: 700;
+  font-size: xx-large;
+  margin: 1rem auto;
+  text-align: center;
+  background: linear-gradient(90deg,#ff8a00,#e52e71);
+  text-shadow: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-box-decoration-break: clone;
+  background-clip: text;
+  border-color: white;
+}
+
+
+@media only screen and (max-width:560px){
+  .landing-page-section-1{
+    background-size:auto ;
+  }
+}

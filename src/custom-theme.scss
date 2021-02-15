@@ -10,4 +10,4 @@ $BTGIT-Angular-accent: mat-palette($mat-brown,A100);
 
 $custom-theme: mat-dark-theme($BTGIT-Angular-primary,$BTGIT-Angular-accent);
 
-@include angular-material-theme($custom-theme);
+// @include angular-material-theme($custom-theme);
