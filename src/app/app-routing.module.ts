@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { TeamComponent } from 'src/app/team/team.component';
 
 const routes: Routes = [
-  {path:"",component:TeamComponent},
 
 ];
 

@@ -53,6 +53,14 @@ body { margin: 0; font-family: 'Noto Sans', sans-serif;   background-color:black
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-box-decoration-break: clone;
-  background-clip: text;
+  //background-clip: text;
   border-color: white;
 }
+
+.snack_bar_container_custom {
+  border: 2px solid white;
+  color: white;
+  border-radius: 15px;
+  background-color: black;
+}
+

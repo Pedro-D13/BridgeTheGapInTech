@@ -1,0 +1,32 @@
+.meetup-section{
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto-fit,2fr);
+  place-content: center;
+  gap: 1rem;
+  justify-content: center;
+
+}
+
+mat-chip-list{
+  display: inline-block;
+}
+
+mat-card {
+  margin: 1rem 2rem;
+  background-color: #212121;
+}
+
+@media only screen and (max-width:740px){
+  .meetup-section{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: .5rem;
+  }
+}
+
+.share-button {
+  margin-left: auto;
+
+}

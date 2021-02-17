@@ -1,1 +1,13 @@
-<p>news-letter works!</p>
+<h1> Subscribe to our newsletter </h1>
+<br>
+<form [formGroup]="news_letter_form">
+  <mat-form-field appearance="standard">
+    <mat-label> Subscribe</mat-label>
+    <input #submittedEmail matInput
+           placeholder="email"
+           type="email">
+  </mat-form-field>
+</form>
+<div>
+  <button (click)="submit_email_to_backend(submittedEmail.value)" mat-stroked-button>submit email</button>
+</div>

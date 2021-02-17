@@ -1,1 +1,65 @@
-<p>meetup-group works!</p>
+<section>
+  <form [formGroup]="form">
+    <mat-form-field appearance="outline">
+      <mat-label> First Name</mat-label>
+      <input formControlName="firstName" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Last Name</mat-label>
+      <input formControlName="lastName" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label> Email</mat-label>
+      <input formControlName="emailAddress" matInput>
+    </mat-form-field>
+  </form>
+</section>
+
+<section class="meetup-section">
+  <!-- will be a grid of similiar to a carousel showing up coming events -->
+  <ng-container *ngFor="let card of eventCards ;let i = index">
+    <mat-card class="example-card" style="padding: 1rem 2rem;">
+      <mat-card-header>
+        <img [src]="card.icon" mat-card-avatar>
+        <mat-card-subtitle>Hosted By {{card.host}}</mat-card-subtitle>
+        <button class="share-button" mat-icon-button>
+          <mat-icon color="primary" svgIcon="share"></mat-icon>
+        </button>
+      </mat-card-header>
+      <mat-chip-list>
+        <mat-chip (click)="attend.focus()" color="primary" selected>
+          Attendees  {{card.attendants}}
+        </mat-chip>
+      </mat-chip-list>
+      <mat-divider></mat-divider>
+      <mat-card-title style="display: block;">{{card.title}}</mat-card-title>
+      <br>
+      <h3 style="display: block">  {{card.date}} </h3>
+
+      <mat-card-actions>
+        <button #attend
+                (click)="attend.disabled = true;
+        card.attending = true;card.attendants =
+        card.attendants
+        + 1"
+                [disabled]="!form.valid && card.attending !== true "
+                [matTooltip]="(attend.disabled === false || card.attending !== true && !form.valid) ?
+                'Fill out form above':''  "
+                color="primary"
+                mat-flat-button>
+          <ng-container [ngSwitch]="card?.attending">
+            <ng-container *ngSwitchCase="true">
+              Attending
+            </ng-container>
+            <ng-container *ngSwitchDefault>
+              Attend
+            </ng-container>
+          </ng-container>
+
+          <mat-icon [matBadge]="attend_icons[i]" aria-hidden="false"
+                    matBadgeSize="large"></mat-icon>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </ng-container>
+</section>

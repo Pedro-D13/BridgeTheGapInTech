@@ -4,16 +4,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from "src/app/shared/shared.module";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MeetupGroupComponent } from './meetup-group/meetup-group.component';
 import { PodcastPageComponent } from './podcast-page/podcast-page.component';
 import { NewsLetterComponent } from './news-letter/news-letter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeetupGroupComponent,
     PodcastPageComponent,
-    NewsLetterComponent,
+
   ],
   imports: [
     BrowserModule,

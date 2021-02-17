@@ -1,20 +1,28 @@
-.dropdown-container{
-  background-color:#1e1e1e;
+.dropdown-container {
+  background-color: #1e1e1e;
+
 }
 
-.tech-logo{
-  padding:1rem;
-  // margin: 1rem;
-  max-height: 20px;
-  max-width: min-content;
+mat-expansion-panel-header{
+    padding: 1rem;
+
 }
-.panel-title{
+
+.tech-logo {
+  padding: 1rem;
+  // margin: 1rem;
+  max-height: 40px;
+  max-width: min-content;
+
+}
+
+.panel-title {
   width: 100%;
   max-width: 50%;
 }
 
 
-.panel-header{
+.panel-header {
   display: flexbox;
   justify-content: space-evenly;
 }
@@ -39,12 +47,17 @@ mat-panel-description {
     height: 100%;
   }
 }
-  .icon-row:hover{
-  animation:increase_in_size .4s ease-in-out ;
+
+.icon-row:hover {
+  animation: increase_in_size .4s ease-in-out;
   animation-fill-mode: both;
-  }
+}
 
 @keyframes increase_in_size {
-  from {transform: scale(1)}
-  to { transform: scale(1.4)}
+  from {
+    transform: scale(1)
+  }
+  to {
+    transform: scale(1.4)
+  }
 }
